@@ -34,7 +34,7 @@ Instead of pasting, it "types" your content, character-by-character, with config
 
 ```bash
 # 1. Clone this repo or download the ZIP
-git clone https://github.com/yourusername/auto-typer-vu.git
+git clone https://github.com/alihusnain-dev/auto-typer-vu.git
 cd auto-typer-vu
 
 # 2. Create a virtual environment (isolated Python setup)
