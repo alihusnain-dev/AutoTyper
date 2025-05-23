@@ -56,12 +56,17 @@ class AutoTyperApp(tk.Tk):
             self.start_btn.config(text=f"Typing in {i}…")
             time.sleep(1)
 
+        # Hide the window so the target app can receive keystrokes
+        self.withdraw()
+        time.sleep(0.2)  # Give time for window to hide
+
         # Type each character
         for ch in text:
             pyautogui.typewrite(ch)
             time.sleep(delay)
 
-        # Done
+        # Restore window and show done message
+        self.deiconify()
         messagebox.showinfo("Done", "Finished typing!")
         self.start_btn.config(text="Start Typing ▶", state=tk.NORMAL)
         self.speed_slider.config(state=tk.NORMAL)
